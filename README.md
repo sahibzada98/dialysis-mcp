@@ -2,6 +2,7 @@
 
 A Model Context Protocol (MCP) server that provides healthcare tools and prompts for interacting with FHIR data and medical resources on EMRs like Cerner and Epic.
 
+## Demo
 [![Demo](screenshots/demo.png)](https://www.agentcare.ai/demo.mp4)
 
 ## Features
@@ -15,12 +16,12 @@ A Model Context Protocol (MCP) server that provides healthcare tools and prompts
 - Comprehensive clinical analysis
 
 ## Screenshots
-![Cerener](screenshots/cerner.png)
-![Epic text](screenshots/epic.png)
-![Converse](screenshots/converse.png)
-![Soap Notes](screenshots/soap.png)
-![Timeline](screenshots/imtimeline.png)
 
+<img src="screenshots/cerner.png" alt="Cerner" width="500">
+<img src="screenshots/epic.png" alt="Epic" width="500">
+<img src="screenshots/converse.png" alt="Converse" width="500">
+<img src="screenshots/soap.png" alt="Soap Notes" width="500">
+<img src="screenshots/imtimeline.png" alt="Timeline" width="500">
 
 ## Tools
 
@@ -56,27 +57,20 @@ Each tool  requires specific parameters:
   - `search-trials`: requires `condition` and optional `location`
   - `drug-interactions`: requires `drugs` array
 
-## Dependencies
-- Node.js
-- Model Context Protocol SDK
-- FHIR Client
-- Node-Cache
-- Node-Fetch
-
 ## Development Configuration 
 - To use with Cerener: Go to https://code-console.cerner.com and create a sandbox account, create a new provider app and get the clientId/secret.
 (note: ec2458f2-1e24-41c8-b71b-0e701af7583d below is the tenant id for cerner developer sandbox)
 
 - To use with Epic: Go to https://fhir.epic.com/Developer/Apps , sign up as developer and create a new app and get the clientId/secret.
 
-For PubMed, Clinical Trials and FDA, you need to get the API keys from the respective websites.
-https://clinicaltrials.gov/api/v2/studies
-https://eutils.ncbi.nlm.nih.gov/entrez/eutils
-https://api.fda.gov/drug/ndc.json
+- For PubMed, Clinical Trials and FDA, you need to get the API keys from the respective websites.
+  - https://clinicaltrials.gov/api/v2/studies
+  - https://eutils.ncbi.nlm.nih.gov/entrez/eutils
+  - https://api.fda.gov/drug/ndc.json
 
 For local testing Create a `.env` file in the root directory or use these environment variables in claude desktop launch configuration.
-```
-//Cerner
+#### Cerner
+````
 clientId="XXXXX",
 clientSecret="XXXXXXX",
 tokenHost="https://authorization.cerner.com", 
@@ -92,11 +86,9 @@ FHIR_BASE_URL:any = "https://fhir-ehr.cerner.com/r4/ec2458f2-1e24-41c8-b71b-0e70
 PUBMED_API_KEY=your_pubmed_api_key
 CLINICAL_TRIALS_API_KEY=your_trials_api_key
 FDA_API_KEY=your_fda_api_key
-```
-
-``
-//EPIC
-secret.
+````
+#### Epic
+````
 clientId="XXXXXXX",
 clientSecret="",
 tokenHost="https://fhir.epic.com",
@@ -112,17 +104,17 @@ FHIR_BASE_URL:any = "https://fhir.epic.com/interconnect-fhir-oauth/api/FHIR/R4" 
 PUBMED_API_KEY=your_pubmed_api_key
 CLINICAL_TRIALS_API_KEY=your_trials_api_key
 FDA_API_KEY=your_fda_api_key
-```
+````
 
-## Start MCP Servdr Locally 
-```
+## Start MCP Server Locally 
+````
 git clone {agentcare-mcp-github path}
 cd agentcare-mcp
 npm install
 npm run build
 ````
 
-## Run using claude desktop
+## Use claude desktop
 ````
 for claude desktop: 
 macOS: ~/Library/Application Support/Claude/claude_desktop_config.json
@@ -164,13 +156,14 @@ macOS: ~/Library/Application Support/Claude/claude_desktop_config.json
 }
 ````
 
-## Run MCP Server Locally using inspector. Make sure to update the .env file with the correct values.
-```
+## Use MCP Inspectopr
+(MCP Server using inspector. Make sure to update the .env file with the correct values.)
+````
 npm install -g @modelcontextprotocol/inspector
 mcp-inspector  build/index.js
 http://localhost:5173
 
-```
+````
 
 ## Test User Logins 
 - Cerner: portal | portal 
