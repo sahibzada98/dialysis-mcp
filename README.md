@@ -17,11 +17,11 @@ A Model Context Protocol (MCP) server that provides healthcare tools and prompts
 
 ## Screenshots
 
-<img src="screenshots/cerner.png" alt="Cerner" width="500">
-<img src="screenshots/epic.png" alt="Epic" width="500">
-<img src="screenshots/converse.png" alt="Converse" width="500">
-<img src="screenshots/soap.png" alt="Soap Notes" width="500">
-<img src="screenshots/imtimeline.png" alt="Timeline" width="500">
+<img src="screenshots/cerner.png" alt="Cerner" width="700">
+<img src="screenshots/epic.png" alt="Epic" width="700">
+<img src="screenshots/converse.png" alt="Converse" width="700">
+<img src="screenshots/soap.png" alt="Soap Notes" width="700">
+<img src="screenshots/timeline.png" alt="Timeline" width="700">
 
 ## Tools
 
@@ -165,12 +165,13 @@ http://localhost:5173
 
 ````
 
-## Test User Logins 
+## Test User Logins
+(commonly used for sandbox/dev)
 - Cerner: portal | portal 
-- FHIR: portal | portal 
+- Epic: FHIRTWO | EpicFhir11! 
 
-
-Troubleshooting:
-if Claude desktop is running it uses port 3456 for Auth. You need to terminate that process using the following command:
+## Troubleshooting:
+If Claude desktop is running it uses port 3456 for Auth. You need to terminate that process using the following command:
+````
 kill -9 $(lsof -t -i:3456)
 ````
