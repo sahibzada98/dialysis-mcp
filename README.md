@@ -2,6 +2,8 @@
 
 A Model Context Protocol (MCP) server that provides healthcare tools and prompts for interacting with FHIR data and medical resources on EMRs like Cerner and Epic.
 
+[![smithery badge](https://smithery.ai/badge/@Kartha-AI/agentcare-mcp)](https://smithery.ai/server/@Kartha-AI/agentcare-mcp)
+
 ## Demo
 [![Demo](screenshots/demo.png)](https://www.agentcare.ai/demo.mp4)
 
