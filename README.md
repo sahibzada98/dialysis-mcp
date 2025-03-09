@@ -118,7 +118,7 @@ npm run build
 ````
 for claude desktop: 
 macOS: ~/Library/Application Support/Claude/claude_desktop_config.json
-(use the env variables as shown above)
+(use the env variables as shown above. refer to config/claude_desktop_config_epic.json and config/claude_desktop_config_cerner.json for examples)
 
 {
   "mcpServers": {
@@ -168,6 +168,9 @@ http://localhost:5173
 (commonly used for sandbox/dev)
 - Cerner: portal | portal 
 - Epic: FHIRTWO | EpicFhir11! 
+
+## Debugging Claude Desktop
+Logs will be at /Users/{your-username}/Library/Logs/Claude/mcp-server-agent-care.log
 
 ## Troubleshooting:
 If Claude desktop is running it uses port 3456 for Auth. You need to terminate that process using the following command:
