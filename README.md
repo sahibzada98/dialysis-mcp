@@ -73,17 +73,16 @@ Each tool  requires specific parameters:
 For local testing Create a `.env` file in the root directory or use these environment variables in claude desktop launch configuration.
 #### Cerner
 ````
-clientId="XXXXX",
-clientSecret="XXXXXXX",
-tokenHost="https://authorization.cerner.com", 
-authorizePath="/tenants/ec2458f2-1e24-41c8-b71b-0e701af7583d/protocols/oauth2/profiles/smart-v1/personas/provider/authorize",
-authorizationMethod='header',
-tokenPath="/tenants/ec2458f2-1e24-41c8-b71b-0e701af7583d/hosts/api.cernermillennium.com/protocols/oauth2/profiles/smart-v1/token",
-audience="https://fhir-ehr.cerner.com/r4/ec2458f2-1e24-41c8-b71b-0e701af7583d",
-callbackURL="http://localhost:3456/oauth/callback",
-scopes="user/Patient.read user/Condition.read user/Observation.read user/MedicationRequest.read user/AllergyIntolerance.read user/Procedure.read user/CarePlan.read user/CareTeam.read user/Encounter.read user/Immunization.read",
-callbackPort="3456"
-
+OAUTH_CLIENT_ID="XXXXX",
+OAUTH_CLIENT_SECRET="XXXXXXX",
+OAUTH_TOKEN_HOST="https://authorization.cerner.com", 
+OAUTH_AUTHORIZE_PATH="/tenants/ec2458f2-1e24-41c8-b71b-0e701af7583d/protocols/oauth2/profiles/smart-v1/personas/provider/authorize",
+OAUTH_AUTHORIZATION_METHOD='header',
+OAUTH_TOKEN_PATH="/tenants/ec2458f2-1e24-41c8-b71b-0e701af7583d/hosts/api.cernermillennium.com/protocols/oauth2/profiles/smart-v1/token",
+OAUTH_AUDIENCE="https://fhir-ehr.cerner.com/r4/ec2458f2-1e24-41c8-b71b-0e701af7583d",
+OAUTH_CALLBACK_URL="http://localhost:3456/oauth/callback",
+OAUTH_SCOPES="user/Patient.read user/Condition.read user/Observation.read user/MedicationRequest.read user/AllergyIntolerance.read user/Procedure.read user/CarePlan.read user/CareTeam.read user/Encounter.read user/Immunization.read",
+OAUTH_CALLBACK_PORT="3456"
 FHIR_BASE_URL:any = "https://fhir-ehr.cerner.com/r4/ec2458f2-1e24-41c8-b71b-0e701af7583d" 
 PUBMED_API_KEY=your_pubmed_api_key
 CLINICAL_TRIALS_API_KEY=your_trials_api_key
@@ -91,18 +90,17 @@ FDA_API_KEY=your_fda_api_key
 ````
 #### Epic
 ````
-clientId="XXXXXXX",
-clientSecret="",
-tokenHost="https://fhir.epic.com",
-authorizePath="/interconnect-fhir-oauth/oauth2/authorize",
-authorizationMethod='body',
-tokenPath="/interconnect-fhir-oauth/oauth2/token",
-audience="https://fhir.epic.com/interconnect-fhir-oauth/api/FHIR/R4",
-callbackURL="http://localhost:3456/oauth/callback",
-scopes="user/Patient.read user/Observation.read user/MedicationRequest.read user/Condition.read user/AllergyIntolerance.read user/Procedure.read user/CarePlan.read user/CareTeam.read user/Encounter.read user/Immunization.read",
-callbackPort=3456
+OAUTH_CLIENT_ID="XXXXXXX",
+OAUTH_CLIENT_SECRET="",
+OAUTH_TOKEN_HOST="https://fhir.epic.com",
+OAUTH_AUTHORIZE_PATH="/interconnect-fhir-oauth/oauth2/authorize",
+OAUTH_AUTHORIZATION_METHOD='body',
+OAUTH_TOKEN_PATH="/interconnect-fhir-oauth/oauth2/token",
+OAUTH_AUDIENCE="https://fhir.epic.com/interconnect-fhir-oauth/api/FHIR/R4",
+OAUTH_CALLBACK_URL="http://localhost:3456/oauth/callback",
+OAUTH_SCOPES="user/Patient.read user/Observation.read user/MedicationRequest.read user/Condition.read user/AllergyIntolerance.read user/Procedure.read user/CarePlan.read user/CareTeam.read user/Encounter.read user/Immunization.read",
+OAUTH_CALLBACK_PORT=3456
 FHIR_BASE_URL:any = "https://fhir.epic.com/interconnect-fhir-oauth/api/FHIR/R4" //EPIC  
-
 PUBMED_API_KEY=your_pubmed_api_key
 CLINICAL_TRIALS_API_KEY=your_trials_api_key
 FDA_API_KEY=your_fda_api_key
@@ -138,16 +136,16 @@ macOS: ~/Library/Application Support/Claude/claude_desktop_config.json
         "/Users/your-username/{agentcare-download-path}/agent-care-mcp/build/index.js"
       ],
       "env": {
-        "clientId": XXXXXX,
-        "clientSecret":XXXXXXX,
-        "tokenHost":,
-        "tokenPath":,
-        "authorizePath",
-        "authorizationMethod": ,
-        "audience":,
-        "callbackURL":,
-        "scopes":,
-        "callbackPort":,
+        "OAUTH_CLIENT_ID": XXXXXX,
+        "OAUTH_CLIENT_SECRET":XXXXXXX,
+        "OAUTH_TOKEN_HOST":,
+        "OAUTH_TOKEN_PATH":,
+        "OAUTH_AUTHORIZE_PATH",
+        "OAUTH_AUTHORIZATION_METHOD": ,
+        "OAUTH_AUDIENCE":,
+        "OAUTH_CALLBACK_URL":,
+        "OAUTH_SCOPES":,
+        "OAUTH_CALLBACK_PORT":,
         "FHIR_BASE_URL":,
         "PUBMED_API_KEY":,
         "CLINICAL_TRIALS_API_KEY":,
@@ -157,7 +155,6 @@ macOS: ~/Library/Application Support/Claude/claude_desktop_config.json
   }
 }
 ````
-
 ## Use MCP Inspectopr
 (MCP Server using inspector. Make sure to update the .env file with the correct values.)
 ````
