@@ -182,7 +182,7 @@ See below how Goose Desktop works with Agent Care:
 (goose extension will be configured with command: 
 /Users/your-username/{agentcare-download-path}/agent-care-mcp/build/index.js)
 
-<img src="screenshots/goose-extension.png" alt="Cerner" width="700">
-<img src="screenshots/goose-env.png" alt="Epic" width="700">
-<img src="screenshots/goose-model.png" alt="Converse" width="700">
-<img src="screenshots/goose-in-action.png" alt="Soap Notes" width="700">
+<img src="screenshots/goose-extension.png" alt="Cerner">
+<img src="screenshots/goose-env.png" alt="Epic">
+<img src="screenshots/goose-model.png" alt="Converse" >
+<img src="screenshots/goose-in-action.png" alt="Soap Notes">
